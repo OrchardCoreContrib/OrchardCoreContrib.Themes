@@ -16,6 +16,19 @@ This section lists all the themes that we are planned to design and develop:
 
 This section lists all the supported themes that we are supported:
 
+## How to add a Theme?
+
+If you would like to add your theme and share it with the community, simply:
+
+1. Fork the `OrchardCoreContrib.Themes` repository
+
+2. Clone the forked repository into your machine
+
+3. Create a theme folder in `src` folder, say `{ThemeName}`
+
+4. Your theme project should be `OrchardCoreContrib.Themes.{ThemeName}`
+
+5. Add your cool theme and send a PR
 
 **Notes:**
 
