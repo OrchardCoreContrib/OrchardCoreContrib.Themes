@@ -1,0 +1,50 @@
+{% assign displayMode = Model.ContentItem.Content.Portfolio.DisplayMode.Text %}
+{% assign displayType = "Summary" + Model.ContentItem.Content.Portfolio.DisplayMode.Text %}
+{% assign hasWrapper = displayMode != "1" %}
+
+{% assign pageSize = Request.Query.size[0] | abs %}
+{% if pageSize <= 0 %}{% assign pageSize = Site.PageSize %}{% endif %}
+
+{% assign queryPageSize = pageSize + 1 %}
+{% assign page = Request.Query.page[0] | abs %}
+{% if page < 1 %}{% assign page = 1 %}{% endif %}
+{% assign queryFrom = page | minus: 1 | times: pageSize  %}
+
+{% assign projectCounts = Queries.CountProjects | query %}
+{% assign count = projectCounts[0].count %}
+{% assign projects = Queries.SearchPortfolio | query: size: queryPageSize, from: queryFrom %}
+{% assign hasMore = projects.size > pageSize %}
+
+<!-- project list -->
+{% if hasWrapper %}<div class="row">{% endif %}
+{% for project in projects %}
+	{% if forloop.index <= pageSize %}
+		{{ project | shape_build_display: displayType | shape_render }}
+	{% endif %}
+{% endfor %}
+{% if hasWrapper %}</div>{% endif %}
+
+<!-- pagination -->
+{% assign beforeQueryFrom = -1 %}
+{% assign previousClass = "disabled" %}
+{% if queryFrom > 0 %}
+	{% assign beforeQueryFrom = queryFrom - pageSize %}
+	{% if beforeQueryFrom < 0 %}{% assign beforeQueryFrom = 0 %}{% endif %}
+	{% assign previousClass = nil %}
+{% endif %}
+
+{% assign afterQueryFrom = -1 %}
+{% assign nextClass = "disabled" %}
+{% if hasMore %}
+	{% assign afterQueryFrom = queryFrom + pageSize %}
+	{% assign nextClass = nil %}
+{% endif %}
+
+{% assign beforeString = beforeQueryFrom | downcase %}
+{% assign afterString = afterQueryFrom | downcase %}
+
+{% assign pagerShape = "Pager" | shape_new | shape_properties: before: beforeString, after: afterString, content_item: Model.ContentItem, page: page, page_size: pageSize, total_item_count: count %}
+{% shape_add_properties Model pager: pagerShape  %}
+{% shape_pager Model.Pager classes: "pagination justify-content-center", item_classes: "page-item", previous_class: previousClass, next_class: nextClass %}
+
+{{ Model.Pager | shape_render }}

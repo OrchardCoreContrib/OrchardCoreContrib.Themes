@@ -1,0 +1,31 @@
+{% assign blog = Model.ContentItem | container %}
+{% assign showWidgets = blog.Content.Blog.ShowWidgets.Value %}
+<div class="row">
+
+    <!-- Post Content Column -->
+    <div class="{% if showWidgets %}col-lg-8{% else %}col-lg-12{% endif %}">
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="{{ Model.ContentItem.Content.BlogPost.Image.Paths[0] | asset_url | resize_url: width:900, height:300, mode:'crop' }}" alt="">
+
+        <hr>
+
+        <!-- Date/Time -->
+        {% assign format = "MMMM dd, yyyy" | t %}
+        {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
+        <p>{{ "Posted on {0}" | t: dateTime | raw }}</p>
+
+        <hr>
+
+        <!-- Post Content -->
+        {{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}
+
+    </div>
+
+    {% if showWidgets %}
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+        {% render_section "ContentAside", required: false %}
+    </div>
+    {% endif %}
+</div>

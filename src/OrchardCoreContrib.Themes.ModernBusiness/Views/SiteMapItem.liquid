@@ -1,0 +1,18 @@
+<li>
+    {% if Model.ContentItem.Content.LinkMenuItemPart.Url != "#" %}
+        <a href="{{ Model.ContentItem.Content.LinkMenuItemPart.Url | href }}">{{ Model.ContentItem.Content.LinkMenuItemPart.Name }}</a>
+    {% else %}
+        {{ Model.ContentItem.Content.LinkMenuItemPart.Name }}
+    {% endif %}
+
+    {% if Model.ContentItem.Content.MenuItemsListPart.MenuItems.size > 0 %}
+    <ul>
+        {% for item in Model.ContentItem.Content.MenuItemsListPart.MenuItems %}
+            {% assign itemShape = item | shape_build_display: "Detail" %}
+            {% shape_clear_alternates itemShape %}
+            {% shape_type itemShape "SiteMapItem" %}
+            {{ itemShape | shape_render }}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</li>

@@ -1,0 +1,13 @@
+<div class="col-lg-4 mb-4">
+    <div class="card h-100">
+        <h4 class="card-header">{{ Model.ContentItem.Content.TitlePart.Title }}</h4>
+        <div class="card-body">
+            <p class="card-text">{{ Model.ContentItem.Content.Service.Excerpt.Text }}</p>
+        </div>
+        <div class="card-footer">
+            {% a display_for: Model.ContentItem, class: "btn btn-primary" %}
+                Learn More
+            {% enda %}
+        </div>
+    </div>
+</div>

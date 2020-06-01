@@ -1,0 +1,34 @@
+{% assign terms = Model.RouteValues["Terms"] | default: Request.Query["Terms"] %}
+{% assign page = Model.Pager.Page | plus: 1 %}
+{% assign pageSize = Model.Pager.PageSize %}
+{% assign after =  Model.Pager.After %}
+
+{% if Model.Disabled %}
+    {% assign _ = Model.Tag | tag_builder: add_classes: "disabled" %}
+{% endif %}
+
+{% if Model.Pager.ContentItem %}
+
+	{% a display_for: Model.Pager.ContentItem, class: "page-link", aria_label: "Next",
+         asp_route_terms: terms,
+         asp_route_page: page, asp_route_size: pageSize,
+         asp_route_after: after %}
+        {% if Model.Pager.NextText %}
+            {{ Model.Pager.NextText }}
+        {% else %}
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        {% endif %}
+	{% enda %}
+
+{% else %}
+
+    {% a action: Model.RouteValues["action"], class: "page-link", aria_label: "Next",
+         asp_route_terms: terms,
+         asp_route_page: page, asp_route_size: pageSize,
+         asp_route_after: after %}
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+    {% enda %}
+
+{% endif %}

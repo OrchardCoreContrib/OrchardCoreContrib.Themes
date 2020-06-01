@@ -1,0 +1,20 @@
+{
+  "TitlePart": [
+    {
+      // hides title part as it is displaying by breadcrumb widget
+      // hides title part for form and label type
+      "displayType": "Detail",
+      "contentType": ["LiquidPage", "FaqPage", "Form", "Label", "Blog", "BlogPost", "Taxonomy"],
+      "place": "-"
+    }
+  ],
+  "ContentPart": [
+    {
+      // hides subtitle part as it is displaying by breadcrumb widget
+      "displayType": "Detail",
+      "differentiator": "SubtitlePart",
+      "contentType": ["LiquidPage", "FaqPage", "Blog", "BlogPost"],
+      "place": "-"
+    }
+  ]
+}

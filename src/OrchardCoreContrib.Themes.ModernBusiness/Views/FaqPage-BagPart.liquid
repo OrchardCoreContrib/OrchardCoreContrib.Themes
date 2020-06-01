@@ -1,0 +1,7 @@
+<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+    {% for item in Model.ContentItems %}
+        {% assign itemShape = item | shape_build_display: "Detail" %}
+        {% shape_add_properties itemShape index: forloop.index %}
+        {{ itemShape | shape_render }}
+    {% endfor %}
+</div>

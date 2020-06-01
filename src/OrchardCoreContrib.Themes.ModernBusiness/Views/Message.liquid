@@ -1,0 +1,11 @@
+{% assign types = "success|primary|warning|danger" | split: '|' %}
+{% assign type = types[Model.Type] %}
+{% if Model.Message %}
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="alert alert-dismissible fade show alert-{{ type }}">
+            {{ Model.Message }}
+        </div>
+    </div>
+</div>
+{% endif %}

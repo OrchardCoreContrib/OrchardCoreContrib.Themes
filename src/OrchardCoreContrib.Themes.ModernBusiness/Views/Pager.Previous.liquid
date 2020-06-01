@@ -1,0 +1,34 @@
+{% assign terms = Model.RouteValues["Terms"] | default: Request.Query["Terms"] %}
+{% assign page = Model.Pager.Page | minus: 1 %}
+{% assign pageSize = Model.Pager.PageSize %}
+{% assign before =  Model.Pager.Before %}
+
+{% if Model.Disabled %}
+    {% assign _ = Model.Tag | tag_builder: add_classes: "disabled" %}
+{% endif %}
+
+{% if Model.Pager.ContentItem %}
+
+	{% a display_for: Model.Pager.ContentItem, class: "page-link", aria_label: "Previous",
+         asp_route_terms: terms,
+         asp_route_page: page, asp_route_size: pageSize,
+         asp_route_before: before %}
+        {% if Model.Pager.PreviousText %}
+            {{ Model.Pager.PreviousText }}
+        {% else %}
+            <span aria-hidden="true">&laquo;</span>
+		    <span class="sr-only">Previous</span>
+        {% endif %}
+	{% enda %}
+
+{% else %}
+
+    {% a action: Model.RouteValues["action"], class: "page-link", aria_label: "Previous",
+         asp_route_terms: terms,
+         asp_route_page: page, asp_route_size: pageSize,
+         asp_route_before: before %}
+		<span aria-hidden="true">&laquo;</span>
+		<span class="sr-only">Previous</span>
+    {% enda %}
+
+{% endif %}

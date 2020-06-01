@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header" role="tab" id="heading{{ Model.Index }}">
+        <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ Model.Index }}" aria-expanded="false" aria-controls="collapseTwo">
+                {{ Model.ContentItem.Content.TitlePart.Title }} #{{ Model.Index }}
+            </a>
+        </h5>
+    </div>
+    <div id="collapse{{ Model.Index }}" class="collapse{% if Model.Index == 1 %} show{% endif %}" role="tabpanel" aria-labelledby="heading{{ Model.Index }}">
+        <div class="card-body">
+            {{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}
+        </div>
+    </div>
+</div>

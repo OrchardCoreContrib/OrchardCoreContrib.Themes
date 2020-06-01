@@ -1,0 +1,15 @@
+<li class="nav-item{% if Model.HasItems %} dropdown{% endif %}">
+    {% shape_clear_alternates Model %}
+    {% shape_type Model "MenuItemLink" %}
+    {{ Model | shape_render }}
+    {% if Model.HasItems %}
+    {% assign link = Model.ContentItem.Content.LinkMenuItemPart %}
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown{{ link.Name | html_class }}">
+        {% for item in Model.Items %}
+        {% shape_clear_alternates item %}
+        {% shape_type item "MenuItemLink" %}
+        {{ item | shape_render }}
+        {% endfor %}
+    </div>
+    {% endif %}
+</li>
