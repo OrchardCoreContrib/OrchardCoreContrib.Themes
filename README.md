@@ -28,7 +28,9 @@ If you would like to add your theme and share it with the community, simply:
 
 4. Your theme project should be `OrchardCoreContrib.Themes.{ThemeName}`
 
-5. Add your cool theme and send a PR
+5. Add a reference to your theme into `OrchardCoreContrib.Themes.Web`, so your lovely theme will be available to everyone
+
+6. Add your cool theme and send a PR
 
 **Notes:**
 
