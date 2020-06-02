@@ -1,0 +1,31 @@
+<div class="card mb-4">
+    {% if Model.ShowWidgets %}
+    <img class="card-img-top" src="{{ Model.ContentItem.Content.BlogPost.Image.Paths[0] | asset_url | resize_url: width:750, height:300, mode:'crop' }}" alt="Card image cap">
+    <div class="card-body">
+        <h2 class="card-title">{{ Model.ContentItem.Content.TitlePart.Title }}</h2>
+        <p class="card-text">{{ Model.ContentItem.Content.BlogPost.Excerpt.Text }}</p>
+        {% a display_for:Model.ContentItem, class:"btn btn-primary" %}Read More &rarr;{% enda %}
+    </div>
+    {% else %}
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                {% a display_for:Model.ContentItem %}
+                    <img class="img-fluid rounded" src="{{ Model.ContentItem.Content.BlogPost.Image.Paths[0] | asset_url | resize_url: width:750, height:300, mode:'crop' }}" alt="">
+                {% enda %}
+            </div>
+            <div class="col-lg-6">
+                <h2 class="card-title">{{ Model.ContentItem.Content.TitlePart.Title }}</h2>
+                <p class="card-text">{{ Model.ContentItem.Content.BlogPost.Excerpt.Text }}</p>
+                {% a display_for:Model.ContentItem, class:"btn btn-primary" %}Read More &rarr;{% enda %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="card-footer text-muted">
+        {% assign format = "MMMM dd, yyyy" | t %}
+        {% assign dateTime = "DateTime" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}
+        {{ "Posted on {0}" | t: dateTime | raw }} by
+        <a href="#">{{ Model.ContentItem.Owner }}</a>
+    </div>
+</div>

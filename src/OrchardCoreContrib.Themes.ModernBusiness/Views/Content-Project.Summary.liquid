@@ -1,0 +1,16 @@
+{% assign project = Model.ContentItem %}
+<div class="row">
+    <div class="col-md-7">
+        {% a display_for:project %}
+        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ project.Content.Project.Images.Paths[0] | asset_url | resize_url: width:700, height:300, mode:'crop' }}" alt="">
+        {% enda %}
+    </div>
+    <div class="col-md-5">
+        <h3>{{ project.Content.TitlePart.Title }}</h3>
+        <p>{{ project.Content.Project.Excerpt.Html | raw }}</p>
+        {% a display_for: project, class: "btn btn-primary" %}
+        View Project
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        {% enda %}
+    </div>
+</div>

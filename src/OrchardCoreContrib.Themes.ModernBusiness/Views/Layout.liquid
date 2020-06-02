@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ "PageTitle" | shape_new | shape_stringify }}</title>
+    {% resources type: "Meta" %}
+    <link type="image/x-icon" rel="shortcut icon" href="{{ "~/OrchardCoreContrib.Themes.ModernBusiness/favicon.ico" | href }}">
+
+    <!-- Bootstrap core CSS -->
+    {% style name:"themodernbusinesstheme-vendor-bootstrap", version:"4" %}
+
+    <!-- Custom styles for this template -->
+    {% style src:"~/OrchardCoreContrib.Themes.ModernBusiness/css/modern-business.css", debug_src:"~/OrchardCoreContrib.Themes.ModernBusiness/css/modern-business.css" %}
+
+    <!-- Bootstrap core JavaScript -->
+    {% script name:"themodernbusinesstheme-vendor-jquery", at:"Foot" %}
+    {% script name:"themodernbusinesstheme-vendor-bootstrap", at:"Foot" %}
+    {% script at:"Foot", src:"~/OrchardCoreContrib.Themes.ModernBusiness/js/modern-business.js", debug_src:"~/OrchardCoreContrib.Themes.ModernBusiness/js/modern-business.js" %}
+
+    {% resources type: "HeadScript" %}
+    {% resources type: "HeadLink" %}
+    {% resources type: "Stylesheet" %}
+    {% render_section "HeadMeta", required: false %}
+</head>
+
+<body id="page-top" dir="{{ Culture.Dir }}">
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            {% assign mainMenuAlias = "alias:main-menu" %}
+            {% assign mainMenuId = "navbarResponsive" + mainMenuAlias | html_class %}
+            <a class="navbar-brand" href="{{ '~/#page-top' | href }}">{{ Site.SiteName }}</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#{{ mainMenuId }}" aria-controls="{{ mainMenuId }}" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% shape "menu", alias: mainMenuAlias, cache_id: "main-menu", cache_tag: mainMenuAlias %}
+            {% scriptblock at: "Foot" %}
+                (function ($) {
+                    $('#{{ mainMenuId }}').activateLinks({ traverse: 1 }, function (items) {
+                        var parents = $(items).closest("li");
+                        parents.addClass('active');
+                    });
+                })(jQuery);
+            {% endscriptblock %}
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        {% render_section "Header", required: false %}
+    </header>
+
+    <!-- Page Content -->
+    <div class="container" id="main">
+        {% render_section "Messages", required: false %}
+        {% render_section "BeforeContent", required: false %}
+        {% render_section "Content" %}
+        {% render_section "AfterContent", required: false %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        {% render_section "Footer", required: false %}
+    </footer>
+
+    {% resources type: "FootScript" %}
+</body>
+
+</html>

@@ -8,4 +8,8 @@
     <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-rc1-13334" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OrchardCoreContrib.Themes.ModernBusiness\OrchardCoreContrib.Themes.ModernBusiness.csproj" />
+  </ItemGroup>
+
 </Project>

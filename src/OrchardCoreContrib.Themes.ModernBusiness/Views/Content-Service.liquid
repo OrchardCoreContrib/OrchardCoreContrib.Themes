@@ -1,0 +1,26 @@
+{% assign services = Content["slug:services"] %}
+{% assign serviceContentItemId = Request.Path | split: "/" | last | split: "-" | first %}
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-lg-3 mb-4">
+        <div class="list-group">
+            {% for service in services.Content.BagPart.ContentItems %}
+            	{% assign classes = "list-group-item" %}
+            	{% if service.ContentItemId == serviceContentItemId %}
+            		{% assign classes = classes | append: " active" %}
+            	{% endif %}
+          
+                {% assign serviceShape = service | shape_build_display: "Summary" %}
+                {% a display_for: serviceShape.ContentItem, class: classes %}
+                	{{ service.TitlePart.Title }}
+                {% enda %}
+            {% endfor %}
+        </div>
+    </div>
+  
+    <!-- Content Column -->
+    <div class="col-lg-9 mb-4">
+        <h2>{{ Model.ContentItem.Content.TitlePart.Title }}</h2>
+        {{ Model.ContentItem.Content.HtmlBodyPart.Html | raw }}
+    </div>
+</div>

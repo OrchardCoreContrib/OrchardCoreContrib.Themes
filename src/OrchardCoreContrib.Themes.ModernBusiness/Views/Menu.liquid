@@ -1,0 +1,8 @@
+<div class="collapse navbar-collapse" id="navbarResponsive{{ Model.Alias | html_class }}">
+    <ul class="navbar-nav ml-auto">
+        {% for item in Model.Items %}
+        {{ item | shape_render }}
+        {% endfor %}
+    </ul>
+</div>
+

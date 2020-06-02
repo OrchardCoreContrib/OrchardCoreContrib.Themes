@@ -1,0 +1,17 @@
+{{ Model.SearchForm | shape_render }}
+{{ Model.SearchResults | shape_render }}
+
+{% unless Model.Pager.Before %}
+    {% shape_add_properties Model.Pager before:"-1" %}
+    {% assign previousClass = "disabled" | t %}
+{% endunless %}
+
+{% unless Model.Pager.After %}
+    {% shape_add_properties Model.Pager after:"-1" %}
+    {% assign nextClass = "disabled" | t %}
+{% endunless %}
+
+{% shape_pager Model.Pager classes: "pagination justify-content-center mb-4", item_classes: "page-item",
+    previous_text: previousText, next_text: nextText,
+    previous_class: previousClass, next_class: nextClass %}
+{{ Model.Pager | shape_render }}

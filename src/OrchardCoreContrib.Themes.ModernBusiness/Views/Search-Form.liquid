@@ -1,0 +1,10 @@
+<form action="{{ "~/search" | href }}" method="get">
+    <div class="card-body">
+        <div class="input-group">
+            <input name="Terms" type="text" class="form-control" value="{{ Model.Terms }}" placeholder="{{ "Enter your search term(s)" | t }}" autofocus />
+            <span class="input-group-append">
+                <button type="submit" class="btn btn-secondary" type="button">{{ "Search" | t }}</button>
+            </span>
+        </div>
+    </div>
+</form>

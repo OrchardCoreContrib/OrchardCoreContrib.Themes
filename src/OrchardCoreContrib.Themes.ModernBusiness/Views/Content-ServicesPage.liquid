@@ -1,0 +1,9 @@
+<!-- Image Header -->
+<img class="img-fluid rounded mb-4" src="{{ "Images/1200x300.png" | asset_url | resize_url: width: 1200, height: 300, mod: "crop" }}" alt="">
+
+<!-- Marketing Icons Section -->
+<div class="row">
+    {% for service in Model.ContentItem.Content.BagPart.ContentItems %}
+        {{ service | shape_build_display: "Summary" | shape_render }}
+    {% endfor %}
+</div>

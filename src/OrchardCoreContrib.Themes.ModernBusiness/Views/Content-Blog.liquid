@@ -1,0 +1,14 @@
+{% assign showWidgets = Model.ContentItem.Content.Blog.ShowWidgets.Value %}
+{% if showWidgets %}<div class="row">{% endif %}
+
+    {% if showWidgets %}<div class="col-md-8">{% endif %}
+    {{ Model.Content.ListPart | shape_render }}
+    {% if showWidgets %}</div>{% endif %}
+
+    {% if showWidgets %}
+    <div class="col-md-4">
+        {% render_section "ContentAside", required: false %}
+    </div>
+    {% endif %}
+
+{% if showWidgets %}</div>{% endif %}
