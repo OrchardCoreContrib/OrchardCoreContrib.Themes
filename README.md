@@ -16,6 +16,8 @@ This section lists all the themes that we are planned to design and develop:
 
 This section lists all the supported themes that we are supported:
 
+- [Modren Business](https://startbootstrap.com/templates/modern-business/) by [Jing Wu](https://github.com/jwu-au)
+
 ## How to add a Theme?
 
 If you would like to add your theme and share it with the community, simply:
