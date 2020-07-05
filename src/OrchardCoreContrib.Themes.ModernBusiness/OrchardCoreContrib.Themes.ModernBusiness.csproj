@@ -1,14 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
+	
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+	</PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc1-13334" />
-    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-rc1-13334" />
-    <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.0.0-rc1-13334" />
-    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-rc1-13334" />
+    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.0.0-rc2-13450" />
   </ItemGroup>
 
 </Project>
