@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Liquid;
 using OrchardCore.Modules;
@@ -10,9 +11,10 @@ namespace OrchardCore.Themes.TheModernBusinessTheme
     {
         public override void ConfigureServices(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IResourceManifestProvider, ResourceManifest>();
+            serviceCollection.AddTransient<IConfigureOptions<ResourceManagementOptions>, ResourceManagementOptionsConfiguration>();
             serviceCollection.AddScoped<IContentDisplayDriver, RedirectAgentContentDisplayDriver>();
         }
+
     }
 
     [RequireFeatures("OrchardCore.Liquid")]

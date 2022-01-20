@@ -9,7 +9,7 @@ namespace OrchardCore.Themes.TheModernBusinessTheme
 {
     public class TagBuilderFilter : ILiquidFilter
     {
-        public ValueTask<FluidValue> ProcessAsync(FluidValue input, FilterArguments arguments, TemplateContext ctx)
+        public ValueTask<FluidValue> ProcessAsync(FluidValue input, FilterArguments arguments, LiquidTemplateContext context)
         {
             if (input.ToObjectValue() is TagBuilder tagBuilder)
             {
