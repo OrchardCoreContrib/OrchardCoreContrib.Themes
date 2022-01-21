@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrchardCoreContrib.Themes.ModernBusiness\OrchardCoreContrib.Themes.ModernBusiness.csproj" />
+    <ProjectReference Include="..\OrchardCoreContrib.Themes.Resume\OrchardCoreContrib.Themes.Resume.csproj" />
   </ItemGroup>
 
 </Project>

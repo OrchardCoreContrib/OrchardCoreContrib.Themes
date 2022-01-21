@@ -1,0 +1,96 @@
+<!-- About-->
+<section class="resume-section" id="about">
+    <div class="resume-section-content">
+        <h1 class="mb-0">
+            @Model.ContentItem.Content.LandingPage.FirstName.Text
+            <span class="text-primary">@Model.ContentItem.Content.LandingPage.LastName.Text</span>
+        </h1>
+        <div class="subheading mb-5">
+            @Model.ContentItem.Content.LandingPage.Address.Text · @Model.ContentItem.Content.LandingPage.Phone.Text ·
+            <a href="mailto:@Model.ContentItem.Content.LandingPage.Email.Text">@Model.ContentItem.Content.LandingPage.Email.Text</a>
+        </div>
+        <p class="lead mb-5">@Model.ContentItem.Content.LandingPage.Bio.Html</p>
+        <div class="social-icons">
+            @foreach (var item in Model.ContentItem.Content.SocialLinks.ContentItems)
+            {
+                <a class="social-icon" href="@item.SocialLink.Url.Text"><i class="fab fa-@item.SocialLink.Icon.Text"></i></a>
+            }
+        </div>
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Experience-->
+<section class="resume-section" id="experience">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Experience</h2>
+        @foreach (var item in Model.ContentItem.Content.Experience.ContentItems)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">@item.DisplayText</h3>
+                    <div class="subheading mb-3">@item.Job.Company.Text</div>
+                    <p>@item.Job.Description.Text</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">@item.Job.Duration.Text</span></div>
+            </div>
+        }
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Education-->
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Education</h2>
+        @foreach (var item in Model.ContentItem.Content.Education.ContentItems)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">@item.Qualification.EducationCenter.Text</h3>
+                    <div class="subheading mb-3">@item.DisplayText</div>
+                    <div>@item.Qualification.Description.Text</div>
+                    <p>GPA: @item.Qualification.GPA.Text</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">@item.Qualification.Duration.Text</span></div>
+            </div>
+        }
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Skills-->
+<section class="resume-section" id="skills">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Skills</h2>
+        @foreach (var item in Model.ContentItem.Content.Skills.ContentItems)
+        {
+            <div class="subheading mb-3">@item.DisplayText</div>
+            @Html.Raw(item.HtmlBodyPart.Html)
+        }
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Interests-->
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Interests</h2>
+        @foreach (var item in Model.ContentItem.Content.Interest.ContentItems)
+        {
+            <p>@item.HtmlBodyPart.Html</p>
+        }
+    </div>
+</section>
+<hr class="m-0" />
+<!-- Awards-->
+<section class="resume-section" id="awards">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Awards & Certifications</h2>
+        <ul class="fa-ul mb-0">
+            @foreach (var item in Model.ContentItem.Content.Awards.ContentItems)
+            {
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    @item.DisplayText
+                </li>
+            }
+        </ul>
+    </div>
+</section>
