@@ -117,6 +117,15 @@
               }
             },
             {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
               "PartName": "BagPart",
               "Name": "SocialLinks",
               "Settings": {
@@ -436,12 +445,22 @@
               }
             },
             {
+              "FieldName": "MediaField",
+              "Name": "Photo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Last Name",
+                  "Position": "2"
+                }
+              }
+            },
+            {
               "FieldName": "TextField",
               "Name": "Address",
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Address",
-                  "Position": "2"
+                  "Position": "3"
                 }
               }
             },
@@ -452,7 +471,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Phone",
                   "Editor": "Tel",
-                  "Position": "3"
+                  "Position": "4"
                 },
                 "TextFieldSettings": {},
                 "ContentIndexSettings": {}
@@ -465,7 +484,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Email",
                   "Editor": "Email",
-                  "Position": "4"
+                  "Position": "5"
                 },
                 "TextFieldSettings": {},
                 "ContentIndexSettings": {}
@@ -477,7 +496,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Bio",
-                  "Position": "5"
+                  "Position": "6"
                 }
               }
             }
@@ -597,6 +616,15 @@
       ]
     },
     {
+      "name": "media",
+      "Files": [
+        {
+          "TargetPath": "profile.jpg",
+          "SourcePath": "../wwwroot/assets/img/profile.jpg"
+        }
+      ]
+    },
+    {
       "name": "Content",
       "data": [
         {
@@ -614,6 +642,11 @@
             "LastName": {
               "Text": "Taylor"
             },
+            "Photo": {
+              "Paths": [
+                "/profile.jpg"
+              ]
+            },
             "Address": {
               "Text": "3542 Berry Street · Cheyenne Wells, CO 80810"
             },
@@ -629,6 +662,9 @@
             "AutoroutePart": {
               "Path": "home",
               "SetHomepage": true
+            },
+            "AliasPart": {
+              "Alias": "home-page"
             }
           },
           "SocialLinks": {
