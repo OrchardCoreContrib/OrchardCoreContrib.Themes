@@ -1,0 +1,1050 @@
+{
+  "name": "Resume",
+  "displayName": "Resume",
+  "description": "A clean, simple, yet elegant free resume/CV template for Bootstrap 5.",
+  "author": "Orchard Core Contrib Team",
+  "website": "",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "categories": [ "default" ],
+  "tags": [
+    "Bootstrap",
+    "Resume",
+    "CV"
+  ],
+  "variables": {
+    "landingPageContentItemId": "[js:uuid()]"
+  },
+  "steps": [
+    {
+      "name": "Feature",
+      "enable": [
+        "OrchardCore.Settings",
+        "OrchardCore.Admin",
+        "OrchardCore.Liquid",
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Templates",
+        "OrchardCore.Alias",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Resources",
+        "OrchardCore.Features",
+        "OrchardCore.Scripting",
+        "OrchardCore.Recipes",
+        "OrchardCore.Shortcodes",
+        "OrchardCore.ContentFields",
+        "OrchardCore.Users",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Deployment",
+        "OrchardCore.Contents.FileContentDefinition",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Deployment.Remote",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Widgets",
+        "OrchardCore.Feeds",
+        "OrchardCore.Flows",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Html",
+        "OrchardCore.Indexing",
+        "OrchardCore.Rules",
+        "OrchardCore.Layers",
+        "OrchardCore.Lists",
+        "OrchardCore.Lucene",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Title",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Queries",
+        "OrchardCore.Roles",
+        "OrchardCore.Shortcodes.Templates",
+        "OrchardCore.Themes",
+        "OrchardCoreContrib.Themes.Resume",
+        "TheAdmin"
+      ]
+    },
+    {
+      "name": "Themes",
+      "Site": "OrchardCoreContrib.Themes.Resume",
+      "Admin": "TheAdmin"
+    },
+    {
+      "name": "settings",
+      "HomeRoute": {
+        "Action": "Display",
+        "Controller": "Item",
+        "Area": "OrchardCore.Contents",
+        "ContentItemId": "[js: variables('landingPageContentItemId')]"
+      }
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "LandingPage",
+          "DisplayName": "Landing Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LandingPage",
+              "Name": "LandingPage",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "ShowHomepageOption": true
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "SocialLinks",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Social Links",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "3"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "SocialLink"
+                  ]
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Experience",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Experience",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "4"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Job"
+                  ]
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Education",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Education",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "5"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Qualification"
+                  ]
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Skills",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Skills",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "6"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Skill"
+                  ]
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Interest",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Interest",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "7"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Interest"
+                  ]
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Awards",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Awards & Certificates",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "8"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Award"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SocialLink",
+          "DisplayName": "Social Link",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "SocialLink",
+              "Name": "SocialLink",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Job",
+          "DisplayName": "Job",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Job",
+              "Name": "Job",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Qualification",
+          "DisplayName": "Qualification",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Qualification",
+              "Name": "Qualification",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Skill",
+          "DisplayName": "Skill",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Skill",
+              "Name": "Skill",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1",
+                  "Editor": "Monaco"
+                },
+                "HtmlBodyPartSettings": {},
+                "ContentIndexSettings": {},
+                "HtmlBodyPartTrumbowygEditorSettings": {
+                  "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
+                },
+                "HtmlBodyPartMonacoEditorSettings": {
+                  "Options": "{\r\n  \"automaticLayout\": true,\r\n  \"language\": \"html\"\r\n}"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Interest",
+          "DisplayName": "Interest",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Interest",
+              "Name": "Interest",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Award",
+          "DisplayName": "Award",
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Award",
+              "Name": "Award",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "AutoroutePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a custom url for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "BagPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Reusable": true,
+              "Description": "Provides a collection behavior for your content item where you can place other content items."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an HTML Body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Title for your content item.",
+              "DefaultPosition": "0"
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "LandingPage",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "FirstName",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "First Name",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LastName",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Last Name",
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Address",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Address",
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Phone",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Phone",
+                  "Editor": "Tel",
+                  "Position": "3"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Email",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Email",
+                  "Editor": "Email",
+                  "Position": "4"
+                },
+                "TextFieldSettings": {},
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "Bio",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Bio",
+                  "Position": "5"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "SocialLink",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Icon",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Icon",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Url",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Url",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Job",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Company",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Company",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Description",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Description",
+                  "Editor": "TextArea",
+                  "Position": "2"
+                },
+                "TextFieldSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Duration",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Duration",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Qualification",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "EducationCenter",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Education Center",
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "GPA",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "GPA",
+                  "Position": "2"
+                },
+                "TextFieldSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Description",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Description",
+                  "Position": "3"
+                }
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Duration",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Duration",
+                  "Position": "1"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Content",
+      "data": [
+        {
+          "ContentItemId": "[js: variables('landingPageContentItemId')]",
+          "ContentType": "LandingPage",
+          "DisplayText": null,
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LandingPage": {
+            "FirstName": {
+              "Text": "Clarence"
+            },
+            "LastName": {
+              "Text": "Taylor"
+            },
+            "Address": {
+              "Text": "3542 Berry Street · Cheyenne Wells, CO 80810"
+            },
+            "Phone": {
+              "Text": "(317) 585-8468"
+            },
+            "Email": {
+              "Text": "name@email.com"
+            },
+            "Bio": {
+              "Html": "I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition."
+            },
+            "AutoroutePart": {
+              "Path": "home",
+              "SetHomepage": true
+            }
+          },
+          "SocialLinks": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "SocialLink",
+                "DisplayText": "LinkedIn",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "SocialLink": {
+                  "Icon": {
+                    "Text": "linkedin-in"
+                  },
+                  "Url": {
+                    "Text": "#"
+                  }
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "SocialLink",
+                "DisplayText": "GitHub",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "SocialLink": {
+                  "Icon": {
+                    "Text": "github"
+                  },
+                  "Url": {
+                    "Text": "#"
+                  }
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "SocialLink",
+                "DisplayText": "Twitter",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "SocialLink": {
+                  "Icon": {
+                    "Text": "twitter"
+                  },
+                  "Url": {
+                    "Text": "#"
+                  }
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "SocialLink",
+                "DisplayText": "Facebook",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "SocialLink": {
+                  "Icon": {
+                    "Text": "facebook-f"
+                  },
+                  "Url": {
+                    "Text": "#"
+                  }
+                }
+              }
+            ]
+          },
+          "Experience": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Job",
+                "DisplayText": "Senior Web Developer",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Job": {
+                  "Company": {
+                    "Text": "Intelitec Solutions"
+                  },
+                  "Description": {
+                    "Text": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+                  },
+                  "Duration": {
+                    "Text": "March 2013 - Present"
+                  },
+                  "Start": {
+                    "Text": "March 2013"
+                  },
+                  "End": {
+                    "Text": null
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Senior Web Developer"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Job",
+                "DisplayText": "Web Developer",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Job": {
+                  "Company": {
+                    "Text": "Intelitec Solutions"
+                  },
+                  "Description": {
+                    "Text": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line."
+                  },
+                  "Duration": {
+                    "Text": "December 2011 - March 2013"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Web Developer"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Job",
+                "DisplayText": "Junior Web Designer",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Job": {
+                  "Company": {
+                    "Text": "Shout! Media Productions"
+                  },
+                  "Description": {
+                    "Text": "Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration."
+                  },
+                  "Duration": {
+                    "Text": "July 2010 - December 2011"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Junior Web Designer"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Job",
+                "DisplayText": "Web Design Intern",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Job": {
+                  "Company": {
+                    "Text": "Shout! Media Productions"
+                  },
+                  "Description": {
+                    "Text": "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI."
+                  },
+                  "Duration": {
+                    "Text": "September 2008 - June 2010"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Web Design Intern"
+                }
+              }
+            ]
+          },
+          "Education": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Qualification",
+                "DisplayText": "Bachelor of Science",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Qualification": {
+                  "EducationCenter": {
+                    "Text": "University of Colorado Boulder"
+                  },
+                  "GPA": {
+                    "Text": "3.23"
+                  },
+                  "Description": {
+                    "Text": "Computer Science - Web Development Track"
+                  },
+                  "Duration": {
+                    "Text": "August 2006 - May 2010"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Bachelor of Science"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Qualification",
+                "DisplayText": "Technology Magnet Program",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Qualification": {
+                  "EducationCenter": {
+                    "Text": "James Buchanan High School"
+                  },
+                  "GPA": {
+                    "Text": "3.56"
+                  },
+                  "Description": {
+                    "Text": null
+                  },
+                  "Duration": {
+                    "Text": "August 2002 - May 2006"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Technology Magnet Program"
+                }
+              }
+            ]
+          },
+          "Skills": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Skill",
+                "DisplayText": "Programming Languages & Tools",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Skill": {},
+                "HtmlBodyPart": {
+                  "Html": "<ul class=\"list-inline dev-icons\">\n                        <li class=\"list-inline-item\"><i class=\"fab fa-html5\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-css3-alt\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-js-square\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-angular\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-react\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-node-js\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-sass\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-less\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-wordpress\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-gulp\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-grunt\"></i></li>\n                        <li class=\"list-inline-item\"><i class=\"fab fa-npm\"></i></li>\n                    </ul>"
+                },
+                "TitlePart": {
+                  "Title": "Programming Languages & Tools"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Skill",
+                "DisplayText": "Workflow",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Skill": {},
+                "HtmlBodyPart": {
+                  "Html": "<ul class=\"fa-ul mb-0\">\n                        <li>\n                            <span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>\n                            Mobile-First, Responsive Design\n                        </li>\n                        <li>\n                            <span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>\n                            Cross Browser Testing &amp; Debugging\n                        </li>\n                        <li>\n                            <span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>\n                            Cross Functional Teams\n                        </li>\n                        <li>\n                            <span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>\n                            Agile Development &amp; Scrum\n                        </li>\n                    </ul>"
+                },
+                "TitlePart": {
+                  "Title": "Workflow"
+                }
+              }
+            ]
+          },
+          "Interest": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Interest",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Interest": {},
+                "HtmlBodyPart": {
+                  "Html": "Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking."
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Interest",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Interest": {},
+                "HtmlBodyPart": {
+                  "Html": "When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world."
+                }
+              }
+            ]
+          },
+          "Awards": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "Google Analytics Certified Developer",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "Google Analytics Certified Developer"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "Mobile Web Specialist - Google Certification",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "Mobile Web Specialist - Google Certification"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "1st Place - University of Colorado Boulder - Emerging Tech Competition 2009",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "1st Place - University of Colorado Boulder - Emerging Tech Competition 2009"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "1st Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "1st Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "2nd Place - University of Colorado Boulder - Emerging Tech Competition 2008",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "2nd Place - University of Colorado Boulder - Emerging Tech Competition 2008"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "1st Place - James Buchanan High School - Hackathon 2006",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "1st Place - James Buchanan High School - Hackathon 2006"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Award",
+                "DisplayText": "3rd Place - James Buchanan High School - Hackathon 2005",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "admin",
+                "Award": {},
+                "TitlePart": {
+                  "Title": "3rd Place - James Buchanan High School - Hackathon 2005"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
