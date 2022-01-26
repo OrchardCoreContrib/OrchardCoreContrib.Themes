@@ -9,6 +9,11 @@ This will encourage all the passionate designers and developers to build the the
 This section lists all the themes that we are planned to design and develop:
 
 - SPA Theme
+- Creative Theme
+- Stylish Portfolio Theme
+- New Age Theme
+- Business Casual Theme
+- SB-Admin Theme
 
 - ... etc
 
@@ -17,6 +22,7 @@ This section lists all the themes that we are planned to design and develop:
 This section lists all the supported themes that we are supported:
 
 - [Modren Business](https://startbootstrap.com/templates/modern-business/) by [Jing Wu](https://github.com/jwu-au)
+- [Resume](https://startbootstrap.com/templates/resume/) by [Hisham Bin Ateya](https://github.com/hishamco)
 
 ## How to add a Theme?
 
