@@ -1,0 +1,57 @@
+﻿<!-- Services-->
+<section class="content-section bg-primary text-white text-center" id="services">
+	<div class="container px-4 px-lg-5">
+		<div class="content-section-heading">
+			<h3 class="text-secondary mb-0">Services</h3>
+			<h2 class="mb-5">What We Offer</h2>
+		</div>
+		<div class="row gx-4 gx-lg-5">
+			{% for service in Model.ContentItem.Content.Services.ContentItems %}
+				<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+					<span class="service-icon rounded-circle mx-auto mb-3">
+						<i class="{{ service.Service.Icon.Text }}"></i>
+					</span>
+					<h4>
+						<strong>{{ service.TitlePart.Title }}</strong>
+					</h4>
+					<p class="text-faded mb-0">{{ service.HtmlBodyPart.Html | raw }}</p>
+				</div>
+				{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Callout-->
+<section class="callout">
+	<div class="container px-4 px-lg-5 text-center">
+		<h2 class="mx-auto mb-5">
+			Welcome to
+			<em>your</em>
+			next website!
+		</h2>
+		<a class="btn btn-primary btn-xl" href="https://startbootstrap.com/theme/stylish-portfolio/">Download Now!</a>
+	</div>
+</section>
+<!-- Portfolio-->
+<section class="content-section" id="portfolio">
+	<div class="container px-4 px-lg-5">
+		<div class="content-section-heading text-center">
+			<h3 class="text-secondary mb-0">Portfolio</h3>
+			<h2 class="mb-5">Recent Projects</h2>
+		</div>
+		<div class="row gx-0">
+			{% for project in Model.ContentItem.Content.Projects.ContentItems %}
+				<div class="col-lg-6">
+					<a class="portfolio-item" href="#!">
+						<div class="caption">
+							<div class="caption-content">
+								<div class="h2">{{ project.TitlePart.Title }}</div>
+								<p class="mb-0">{{ project.HtmlBodyPart.Html }}</p>
+							</div>
+						</div>
+						<img class="img-fluid" src="{{project.Project.Image.Paths.first | asset_url}}" alt="..." />
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
