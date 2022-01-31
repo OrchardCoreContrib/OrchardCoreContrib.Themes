@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OrchardCoreContrib.Themes.ModernBusiness\OrchardCoreContrib.Themes.ModernBusiness.csproj" />
     <ProjectReference Include="..\OrchardCoreContrib.Themes.Resume\OrchardCoreContrib.Themes.Resume.csproj" />
+    <ProjectReference Include="..\OrchardCoreContrib.Themes.StylishPortfolio\OrchardCoreContrib.Themes.StylishPortfolio.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCoreContrib.Themes.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCoreContrib.Themes.ModernBusiness", "src\OrchardCoreContrib.Themes.ModernBusiness\OrchardCoreContrib.Themes.ModernBusiness.csproj", "{E4042BFE-4974-4DEF-816E-8BEF90FE10B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardCoreContrib.Themes.Resume", "src\OrchardCoreContrib.Themes.Resume\OrchardCoreContrib.Themes.Resume.csproj", "{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrchardCoreContrib.Themes.Resume", "src\OrchardCoreContrib.Themes.Resume\OrchardCoreContrib.Themes.Resume.csproj", "{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrchardCoreContrib.Themes.StylishPortfolio", "src\OrchardCoreContrib.Themes.StylishPortfolio\OrchardCoreContrib.Themes.StylishPortfolio.csproj", "{931C1C6A-0473-426D-BD04-06B0E0BDFF3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931C1C6A-0473-426D-BD04-06B0E0BDFF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931C1C6A-0473-426D-BD04-06B0E0BDFF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931C1C6A-0473-426D-BD04-06B0E0BDFF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931C1C6A-0473-426D-BD04-06B0E0BDFF3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{0529E3C3-23CA-4B03-9D69-74BEFC1CC19B} = {E3A2E99B-7FED-4C26-AE02-05643A5A947D}
 		{E4042BFE-4974-4DEF-816E-8BEF90FE10B3} = {E3A2E99B-7FED-4C26-AE02-05643A5A947D}
 		{EAB38AFE-4B79-4E4C-82B3-FBF5773B9EB1} = {E3A2E99B-7FED-4C26-AE02-05643A5A947D}
+		{931C1C6A-0473-426D-BD04-06B0E0BDFF3F} = {E3A2E99B-7FED-4C26-AE02-05643A5A947D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E31E3A54-97FE-44E7-B76D-F988B34AC1D5}

@@ -1,0 +1,557 @@
+{
+  "name": "StylishPortfolio",
+  "displayName": "Stylish Portfolio",
+  "description": "A Free Bootstrap Theme by Start Bootstrap",
+  "author": "Orchard Core Contrib Team",
+  "website": "",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "categories": [ "default" ],
+  "tags": [ "Bootstrap", "Portfolio" ],
+  "variables": {
+    "landingPageContentItemId": "[js:uuid()]"
+  },
+  "steps": [
+    {
+      "name": "Feature",
+      "enable": [
+        "OrchardCore.Settings",
+        "OrchardCore.Admin",
+        "OrchardCore.Liquid",
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Templates",
+        "OrchardCore.Alias",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Resources",
+        "OrchardCore.Features",
+        "OrchardCore.Scripting",
+        "OrchardCore.Recipes",
+        "OrchardCore.Shortcodes",
+        "OrchardCore.ContentFields",
+        "OrchardCore.Users",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Deployment",
+        "OrchardCore.Contents.FileContentDefinition",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Deployment.Remote",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Widgets",
+        "OrchardCore.Feeds",
+        "OrchardCore.Flows",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Html",
+        "OrchardCore.Indexing",
+        "OrchardCore.Rules",
+        "OrchardCore.Layers",
+        "OrchardCore.Lists",
+        "OrchardCore.Lucene",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Title",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Queries",
+        "OrchardCore.Roles",
+        "OrchardCore.Shortcodes.Templates",
+        "OrchardCore.Themes",
+        "OrchardCoreContrib.Themes.Resume",
+        "TheAdmin"
+      ]
+    },
+    {
+      "name": "Themes",
+      "Site": "OrchardCoreContrib.Themes.StylishPortfolio",
+      "Admin": "TheAdmin"
+    },
+    {
+      "name": "settings",
+      "HomeRoute": {
+        "Action": "Display",
+        "Controller": "Item",
+        "Area": "OrchardCore.Contents",
+        "ContentItemId": "[js: variables('landingPageContentItemId')]"
+      }
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "LandingPage",
+          "DisplayName": "Landing Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "LandingPage",
+              "Name": "LandingPage",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Services",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Services",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "3"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Service"
+                  ]
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Projects",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Projects",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "4"
+                },
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "Project"
+                  ]
+                },
+                "ContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "5"
+                },
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "ShowHomepageOption": true
+                },
+                "ContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Service",
+          "DisplayName": "Service",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Service",
+              "Name": "Service",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Project",
+          "DisplayName": "Project",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Project",
+              "Name": "Project",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "AutoroutePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a custom url for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "BagPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Reusable": true,
+              "Description": "Provides a collection behavior for your content item where you can place other content items."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an HTML Body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "TitlePart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides a Title for your content item.",
+              "DefaultPosition": "0"
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        },
+        {
+          "Name": "Service",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Icon",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Icon",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Project",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "MediaField",
+              "Name": "Image",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Image",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "media",
+      "Files": [
+        {
+          "TargetPath": "portfolio-1.jpg",
+          "SourcePath": "../wwwroot/assets/img/portfolio-1.jpg"
+        },
+        {
+          "TargetPath": "portfolio-2.jpg",
+          "SourcePath": "../wwwroot/assets/img/portfolio-2.jpg"
+        },
+        {
+          "TargetPath": "portfolio-3.jpg",
+          "SourcePath": "../wwwroot/assets/img/portfolio-3.jpg"
+        },
+        {
+          "TargetPath": "portfolio-4.jpg",
+          "SourcePath": "../wwwroot/assets/img/portfolio-4.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Content",
+      "data": [
+        {
+          "ContentItemId": "[js: variables('landingPageContentItemId')]",
+          "ContentType": "LandingPage",
+          "DisplayText": null,
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "LandingPage": {
+            "AutoroutePart": {
+              "Path": "home",
+              "SetHomepage": true
+            },
+            "AliasPart": {
+              "Alias": "home-page"
+            }
+          },
+          "Services": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Service",
+                "DisplayText": "Responsive",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Service": {
+                  "Icon": {
+                    "Text": "icon-screen-smartphone"
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "Looks great on any screen size!"
+                },
+                "TitlePart": {
+                  "Title": "Responsive"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Service",
+                "DisplayText": "Redesigned",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Service": {
+                  "Icon": {
+                    "Text": "icon-pencil"
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "Freshly redesigned for Bootstrap 5."
+                },
+                "TitlePart": {
+                  "Title": "Redesigned"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Service",
+                "DisplayText": "Favorited",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Service": {
+                  "Icon": {
+                    "Text": "icon-like"
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "Millions of users  Start Bootstrap!"
+                },
+                "TitlePart": {
+                  "Title": "Favorited"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Service",
+                "DisplayText": "Question",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Service": {
+                  "Icon": {
+                    "Text": "icon-mustache"
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "I mustache you a question..."
+                },
+                "TitlePart": {
+                  "Title": "Question"
+                }
+              }
+            ]
+          },
+          "Projects": {
+            "ContentItems": [
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Project",
+                "DisplayText": "Stationary",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Project": {
+                  "Image": {
+                    "Paths": [
+                      "portfolio-1.jpg"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "A yellow pencil with envelopes on a clean, blue backdrop!"
+                },
+                "TitlePart": {
+                  "Title": "Stationary"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Project",
+                "DisplayText": "Ice Cream",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Project": {
+                  "Image": {
+                    "Paths": [
+                      "portfolio-2.jpg"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!"
+                },
+                "TitlePart": {
+                  "Title": "Ice Cream"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Project",
+                "DisplayText": "Strawberries",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Project": {
+                  "Image": {
+                    "Paths": [
+                      "portfolio-3.jpg"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "Strawberries are such a tasty snack, especially with a little sugar on top!"
+                },
+                "TitlePart": {
+                  "Title": "Strawberries"
+                }
+              },
+              {
+                "ContentItemId": "[js:uuid()]",
+                "ContentItemVersionId": "[js:uuid()]",
+                "ContentType": "Project",
+                "DisplayText": "Workspace",
+                "Latest": false,
+                "Published": false,
+                "Owner": "",
+                "Author": "[js: parameters('AdminUsername')]",
+                "Project": {
+                  "Image": {
+                    "Paths": [
+                      "portfolio-4.jpg"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "HtmlBodyPart": {
+                  "Html": "A yellow workspace with some scissors, pencils, and other objects."
+                },
+                "TitlePart": {
+                  "Title": "Workspace"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
