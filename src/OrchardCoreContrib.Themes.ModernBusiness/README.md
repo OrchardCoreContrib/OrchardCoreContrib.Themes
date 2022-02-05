@@ -21,3 +21,7 @@ Site Theme
 ## NuGet Packages
 
 The theme is not published yet.
+
+## Credits
+
+[Jing Wu](https://github.com/jwu-au)

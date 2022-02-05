@@ -4,25 +4,15 @@ This repository contains a set of themes for [Orchard Core CMS](https://github.c
 
 This will encourage all the passionate designers and developers to build the themes that aren't included in Orchard Core.
 
-## Planned Themes
+## Documentations
 
-This section lists all the themes that we are planned to design and develop:
+- The `OrchardCoreContrib.Themes` repository consists of the following themes:
 
-- SPA Theme
-- Creative Theme
-- Stylish Portfolio Theme
-- New Age Theme
-- Business Casual Theme
-- SB-Admin Theme
-
-- ... etc
-
-## Supported Themes
-
-This section lists all the supported themes that we are supported:
-
-- [Modren Business](https://startbootstrap.com/templates/modern-business/) by [Jing Wu](https://github.com/jwu-au)
-- [Resume](https://startbootstrap.com/templates/resume/) by [Hisham Bin Ateya](https://github.com/hishamco)
+| Name | Namespace |
+| --- | --- |
+| [Modren Business Theme](src/OrchardCoreContrib.Themes.ModernBusiness/README.md) | `OrchardCoreContrib.Themes.ModernBusiness` |
+| [Resume Theme](src/OrchardCoreContrib.Themes.Resume/README.md) | `OrchardCoreContrib.Themes.Resume` |
+| [Stylish Portfolio Theme](src/OrchardCoreContrib.Themes.StylishPortfolio/README.md) | `OrchardCoreContrib.Themes.StylishPortfolio` |
 
 ## How to add a Theme?
 
@@ -37,7 +27,3 @@ If you would like to add your theme and share it with the community, simply:
 4. Add a reference to your theme into `OrchardCoreContrib.Themes.Web`, so your lovely theme will be available to everyone
 
 5. Add your cool theme and send a PR
-
-**Notes:**
-
-We should have at least variation of themes designed and developed using different technologies and templating languages such as Razor, Liquid, VueJs .. etc.
