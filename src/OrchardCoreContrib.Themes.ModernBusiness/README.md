@@ -20,7 +20,9 @@ Site Theme
 
 ## NuGet Packages
 
-The theme is not published yet.
+| Name | Version |
+| --- | --- |
+| [`OrchardCoreContrib.Themes.ModernBusiness `](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness /) | 1.0.0 |
 
 ## Credits
 
