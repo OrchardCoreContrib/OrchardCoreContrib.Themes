@@ -20,4 +20,6 @@ Site Theme
 
 ## NuGet Packages
 
-The theme is not published yet.
+| Name | Version |
+| --- | --- |
+| [`OrchardCoreContrib.Themes.StylishPortfolio`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.StylishPortfolio/) | 1.0.0 |
