@@ -23,4 +23,5 @@ Site Theme
 
 | Name | Version |
 | --- | --- |
-| [`OrchardCoreContrib.Themes.Resume`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.Resume/) | 1.0.0 |
+| [`OrchardCoreContrib.Themes.Resume`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.Resume/1.1.0) | 1.1.0 |
+| [`OrchardCoreContrib.Themes.Resume`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.Resume/1.0.0) | 1.0.0 |
