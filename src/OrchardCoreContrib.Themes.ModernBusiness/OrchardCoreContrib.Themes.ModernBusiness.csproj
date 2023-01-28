@@ -21,10 +21,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.2.2" />
-		<PackageReference Include="OrchardCore.DisplayManagement" Version="1.2.2" />
-		<PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.2.2" />
-		<PackageReference Include="OrchardCore.Theme.Targets" Version="1.2.2" />
+		<PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.5.0" />
+		<PackageReference Include="OrchardCore.DisplayManagement" Version="1.5.0" />
+		<PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="1.5.0" />
+		<PackageReference Include="OrchardCore.Theme.Targets" Version="1.5.0" />
 	</ItemGroup>
 
 </Project>
