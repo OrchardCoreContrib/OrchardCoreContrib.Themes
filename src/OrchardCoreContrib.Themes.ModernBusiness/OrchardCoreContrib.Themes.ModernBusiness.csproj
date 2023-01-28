@@ -15,10 +15,15 @@
 		<PackageTags>Orchard Core, Orchard Core Contrib, Themes, Business</PackageTags>
 		<PackageReleaseNotes>https://github.com/OrchardCoreContrib/OrchardCoreContrib.Themes/releases</PackageReleaseNotes>
 		<PackageId>OrchardCoreContrib.Themes.ModernBusiness</PackageId>
+		<PackageIcon>icon.png</PackageIcon>
 		<Product>Orchard Core Contrib Modren Business Theme</Product>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Copyright>2019 Orchard Core Contrib</Copyright>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../../images/icon.png" Pack="true" PackagePath="icon.png" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.5.0" />
