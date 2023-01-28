@@ -22,6 +22,7 @@ Site Theme
 
 | Name | Version |
 | --- | --- |
+| [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.1.0) | 1.2.0 |
 | [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.1.0) | 1.1.0 |
 | [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.0.0) | 1.0.0 |
 

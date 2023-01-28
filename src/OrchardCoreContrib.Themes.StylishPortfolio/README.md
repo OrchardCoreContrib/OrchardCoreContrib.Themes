@@ -22,5 +22,6 @@ Site Theme
 
 | Name | Version |
 | --- | --- |
+| [`OrchardCoreContrib.Themes.StylishPortfolio`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.StylishPortfolio/1.2.0) | 1.2.0 |
 | [`OrchardCoreContrib.Themes.StylishPortfolio`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.StylishPortfolio/1.1.0) | 1.1.0 |
- [`OrchardCoreContrib.Themes.StylishPortfolio`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.StylishPortfolio/1.0.0) | 1.0.0 |
+| [`OrchardCoreContrib.Themes.StylishPortfolio`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.StylishPortfolio/1.0.0) | 1.0.0 |
