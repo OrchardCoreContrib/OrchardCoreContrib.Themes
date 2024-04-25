@@ -1,5 +1,7 @@
 # OrchardCoreContrib.Themes
 
+![Orchard Core Contrib](images/OCC.png)
+
 This repository contains a set of themes for [Orchard Core CMS](https://github.com/OrchardCMS/OrchardCore) that driven by the community members who love Orchard Core.
 
 This will encourage all the passionate designers and developers to build the themes that aren't included in Orchard Core.
@@ -22,7 +24,7 @@ If you would like to add your theme and share it with the community, simply:
 
 2. Clone the forked repository into your machine
 
-3. Add your theme project with the convention `OrchardCoreContrib.Themes.{ThemeName}` in the `src` folder 
+3. Add your theme project with the convention `OrchardCoreContrib.Themes.{ThemeName}` in the `src` folder
 
 4. Add a reference to your theme into `OrchardCoreContrib.Themes.Web`, so your lovely theme will be available to everyone
 
