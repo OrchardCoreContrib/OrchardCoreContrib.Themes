@@ -1,4 +1,4 @@
-# Moderen Business Theme
+# Modern Business Theme
 
 Modern Business is a fully loaded Bootstrap 4 website starter template.
 

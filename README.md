@@ -12,7 +12,7 @@ This will encourage all the passionate designers and developers to build the the
 
 | Name | Namespace | NuGet |
 | --- | --- | --- |
-| [Modren Business Theme](src/OrchardCoreContrib.Themes.ModernBusiness/README.md) | `OrchardCoreContrib.Themes.ModernBusiness` | [![NuGet](https://img.shields.io/nuget/v/OrchardCoreContrib.Themes.ModernBusiness.svg)](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness) |
+| [Modern Business Theme](src/OrchardCoreContrib.Themes.ModernBusiness/README.md) | `OrchardCoreContrib.Themes.ModernBusiness` | [![NuGet](https://img.shields.io/nuget/v/OrchardCoreContrib.Themes.ModernBusiness.svg)](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness) |
 | [Resume Theme](src/OrchardCoreContrib.Themes.Resume/README.md) | `OrchardCoreContrib.Themes.Resume` | [![NuGet](https://img.shields.io/nuget/v/OrchardCoreContrib.Themes.Resume.svg)](https://www.nuget.org/packages/OrchardCoreContrib.Themes.Resume) |
 | [Stylish Portfolio Theme](src/OrchardCoreContrib.Themes.StylishPortfolio/README.md) | `OrchardCoreContrib.Themes.StylishPortfolio` | [![NuGet](https://img.shields.io/nuget/v/OrchardCoreContrib.Themes.StylishPortfolio.svg)](https://www.nuget.org/packages/OrchardCoreContrib.OrchardCoreContrib.Themes.StylishPortfolio) |
 

@@ -16,7 +16,7 @@
 		<PackageReleaseNotes>https://github.com/OrchardCoreContrib/OrchardCoreContrib.Themes/releases</PackageReleaseNotes>
 		<PackageId>OrchardCoreContrib.Themes.ModernBusiness</PackageId>
 		<PackageIcon>icon.png</PackageIcon>
-		<Product>Orchard Core Contrib Modren Business Theme</Product>
+		<Product>Orchard Core Contrib Modern Business Theme</Product>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Copyright>2019 Orchard Core Contrib</Copyright>
 	</PropertyGroup>
