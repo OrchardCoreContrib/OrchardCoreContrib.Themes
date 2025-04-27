@@ -1,8 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<VersionPrefix>1.2.0</VersionPrefix>
 		<Authors>The Orchard Core Contrib Team</Authors>
 		<Company />
@@ -26,10 +24,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="OrchardCore.ContentManagement.Display" Version="2.0.0" />
-		<PackageReference Include="OrchardCore.DisplayManagement" Version="2.0.0" />
-		<PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="2.0.0" />
-		<PackageReference Include="OrchardCore.Theme.Targets" Version="2.0.0" />
+		<PackageReference Include="OrchardCore.ContentManagement.Display" />
+		<PackageReference Include="OrchardCore.DisplayManagement" />
+		<PackageReference Include="OrchardCore.ResourceManagement" />
+		<PackageReference Include="OrchardCore.Theme.Targets" />
 	</ItemGroup>
 
 </Project>
