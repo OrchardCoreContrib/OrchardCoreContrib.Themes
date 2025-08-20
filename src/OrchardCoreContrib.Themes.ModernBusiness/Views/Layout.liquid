@@ -31,7 +31,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             {% assign mainMenuAlias = "alias:main-menu" %}
-            {% assign mainMenuId = "navbarResponsive" + mainMenuAlias | html_class %}
+            {% assign mainMenuId = "navbarResponsive" | append: mainMenuAlias | html_class %}
             <a class="navbar-brand" href="{{ '~/#page-top' | href }}">{{ Site.SiteName }}</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#{{ mainMenuId }}" aria-controls="{{ mainMenuId }}" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
