@@ -9,29 +9,21 @@ using OrchardCore.DisplayManagement.Handlers;
 using OrchardCore.DisplayManagement.Views;
 using System.Threading.Tasks;
 
-namespace OrchardCore.Themes.TheModernBusinessTheme
+namespace OrchardCoreContrib.Themes.ModernBusiness.Drivers;
+
+public class RedirectAgentContentDisplayDriver(IHttpContextAccessor httpContextAccessor, IUrlHelperFactory urlHelperFactory) : ContentDisplayDriver
 {
-    public class RedirectAgentContentDisplayDriver : ContentDisplayDriver
+    public override Task<IDisplayResult> DisplayAsync(ContentItem model, BuildDisplayContext context)
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IUrlHelperFactory _urlHelperFactory;
-
-        public RedirectAgentContentDisplayDriver(IHttpContextAccessor httpContextAccessor, IUrlHelperFactory urlHelperFactory)
+        if (model.ContentType == "RedirectAgent" && context.DisplayType == "Detail")
         {
-            _httpContextAccessor = httpContextAccessor;
-            _urlHelperFactory = urlHelperFactory;
+            var targetUrl = model.Content.RedirectAgent.TargetUrl.Text;
+            
+            targetUrl = urlHelperFactory.GetUrlHelper(new ActionContext(httpContextAccessor.HttpContext, new RouteData(), new ActionDescriptor())).Content(targetUrl);
+            
+            httpContextAccessor.HttpContext.Response.Redirect(targetUrl);
         }
 
-        public override Task<IDisplayResult> DisplayAsync(ContentItem model, BuildDisplayContext context)
-        {
-            if (model.ContentType == "RedirectAgent" && context.DisplayType == "Detail")
-            {
-                string targetUrl = model.Content.RedirectAgent.TargetUrl.Text;
-                targetUrl = _urlHelperFactory.GetUrlHelper(new ActionContext(_httpContextAccessor.HttpContext, new RouteData(), new ActionDescriptor())).Content(targetUrl);
-                _httpContextAccessor.HttpContext.Response.Redirect(targetUrl);
-            }
-
-            return Task.FromResult<IDisplayResult>(null);
-        }
+        return Task.FromResult<IDisplayResult>(null);
     }
 }
