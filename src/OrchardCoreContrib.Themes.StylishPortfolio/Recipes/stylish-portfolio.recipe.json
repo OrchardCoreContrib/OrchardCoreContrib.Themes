@@ -56,7 +56,7 @@
         "OrchardCore.Roles",
         "OrchardCore.Shortcodes.Templates",
         "OrchardCore.Themes",
-        "OrchardCoreContrib.Themes.Resume",
+        "OrchardCoreContrib.Themes.StylishPortfolio",
         "TheAdmin"
       ]
     },
