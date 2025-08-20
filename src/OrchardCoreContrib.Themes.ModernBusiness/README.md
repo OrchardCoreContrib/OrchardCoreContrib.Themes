@@ -4,7 +4,7 @@ Modern Business is a fully loaded Bootstrap 4 website starter template.
 
 ## Version
 
-1.0.0
+1.3.0
 
 ## Category
 
@@ -22,7 +22,8 @@ Site Theme
 
 | Name | Version |
 | --- | --- |
-| [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.1.0) | 1.2.0 |
+| [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.3.0) | 1.3.0 |
+| [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.2.0) | 1.2.0 |
 | [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.1.0) | 1.1.0 |
 | [`OrchardCoreContrib.Themes.ModernBusiness`](https://www.nuget.org/packages/OrchardCoreContrib.Themes.ModernBusiness/1.0.0) | 1.0.0 |
 
