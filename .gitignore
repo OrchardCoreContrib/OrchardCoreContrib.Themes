@@ -355,4 +355,4 @@ MigrationBackup/
 
 App_Data*/
 **/Localization/
-**/wwwroot
+src/OrchardCoreContrib.Themes.Web/wwwroot
