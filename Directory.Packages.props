@@ -3,12 +3,12 @@
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageVersion Include="OrchardCore.Alias" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.Application.Cms.Targets" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.ContentManagement" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.ContentManagement.Display" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.DisplayManagement" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.ResourceManagement" Version="2.2.1" />
-		<PackageVersion Include="OrchardCore.Theme.Targets" Version="2.2.1" />
+		<PackageVersion Include="OrchardCore.Alias" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.Application.Cms.Targets" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.ContentManagement" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.ContentManagement.Display" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.DisplayManagement" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.ResourceManagement" Version="3.0.0-preview-19005" />
+		<PackageVersion Include="OrchardCore.Theme.Targets" Version="3.0.0-preview-19005" />
 	</ItemGroup>
 </Project>
