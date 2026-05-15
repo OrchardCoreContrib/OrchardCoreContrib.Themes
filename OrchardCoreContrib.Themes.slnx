@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/images/">
+    <File Path="images/icon.png" />
+  </Folder>
+  <Folder Name="/Solution items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/OrchardCoreContrib.Themes.ModernBusiness/OrchardCoreContrib.Themes.ModernBusiness.csproj" />
+    <Project Path="src/OrchardCoreContrib.Themes.Resume/OrchardCoreContrib.Themes.Resume.csproj" />
+    <Project Path="src/OrchardCoreContrib.Themes.StylishPortfolio/OrchardCoreContrib.Themes.StylishPortfolio.csproj" />
+    <Project Path="src/OrchardCoreContrib.Themes.Web/OrchardCoreContrib.Themes.Web.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>
