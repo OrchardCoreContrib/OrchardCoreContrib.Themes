@@ -1,5 +1,8 @@
 ﻿<Project>
 	<ItemGroup>
+		<PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="10.0.8" />
+		<PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.6.0" />
+		<PackageVersion Include="Microsoft.Identity.Web" Version="4.9.0" />
 		<PackageVersion Include="OrchardCore.Alias" Version="$(OrchardCoreVersion)" />
 		<PackageVersion Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
 		<PackageVersion Include="OrchardCore.ContentManagement" Version="$(OrchardCoreVersion)" />
