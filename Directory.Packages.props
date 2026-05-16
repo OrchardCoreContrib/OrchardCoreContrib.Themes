@@ -1,7 +1,4 @@
 ﻿<Project>
-	<PropertyGroup>
-		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-	</PropertyGroup>
 	<ItemGroup>
 		<PackageVersion Include="OrchardCore.Alias" Version="$(OrchardCoreVersion)" />
 		<PackageVersion Include="OrchardCore.Application.Cms.Targets" Version="$(OrchardCoreVersion)" />
