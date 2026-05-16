@@ -4,6 +4,12 @@
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<NoWarn>NU1507</NoWarn>
+
+		<OrchardCoreVersion>2.2.1</OrchardCoreVersion>
 	</PropertyGroup>
 </Project>
