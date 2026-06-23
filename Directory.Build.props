@@ -10,6 +10,6 @@
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 		<NoWarn>NU1507</NoWarn>
 
-		<OrchardCoreVersion>2.2.1</OrchardCoreVersion>
+		<OrchardCoreVersion>3.0.0</OrchardCoreVersion>
 	</PropertyGroup>
 </Project>
