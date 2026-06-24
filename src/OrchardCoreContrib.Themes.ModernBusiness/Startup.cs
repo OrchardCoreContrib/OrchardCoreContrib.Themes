@@ -1,9 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using OrchardCore.ContentManagement.Display.ContentDisplay;
 using OrchardCore.Liquid;
 using OrchardCore.Modules;
-using OrchardCore.ResourceManagement;
 using OrchardCoreContrib.Themes.ModernBusiness.Drivers;
 using OrchardCoreContrib.Themes.ModernBusiness.Liquid;
 
@@ -11,10 +9,11 @@ namespace OrchardCoreContrib.Themes.ModernBusiness;
 
 public class Startup : StartupBase
 {
-    public override void ConfigureServices(IServiceCollection serviceCollection)
+    public override void ConfigureServices(IServiceCollection services)
     {
-        serviceCollection.AddTransient<IConfigureOptions<ResourceManagementOptions>, ResourceManagementOptionsConfiguration>();
-        serviceCollection.AddScoped<IContentDisplayDriver, RedirectAgentContentDisplayDriver>();
+        services.AddResourceConfiguration<ResourceManagementOptionsConfiguration>();
+
+        services.AddScoped<IContentDisplayDriver, RedirectAgentContentDisplayDriver>();
     }
 }
 
@@ -22,7 +21,5 @@ public class Startup : StartupBase
 public class LiquidStartup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services)
-    {
-        services.AddLiquidFilter<TagBuilderFilter>("tag_builder");
-    }
+        => services.AddLiquidFilter<TagBuilderFilter>("tag_builder");
 }
