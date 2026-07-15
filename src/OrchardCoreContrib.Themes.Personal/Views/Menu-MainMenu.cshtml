@@ -1,0 +1,11 @@
+﻿@{
+    TagBuilder tag = Tag(Model, "ul");
+    tag.AddCssClass("navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder");
+
+    foreach (var item in Model.Items)
+    {
+        tag.InnerHtml.AppendHtml(await DisplayAsync(item));
+    }
+}
+
+@tag
