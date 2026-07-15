@@ -8,6 +8,7 @@
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/OrchardCoreContrib.Themes.ModernBusiness/OrchardCoreContrib.Themes.ModernBusiness.csproj" />
+    <Project Path="src/OrchardCoreContrib.Themes.Personal/OrchardCoreContrib.Themes.Personal.csproj" Id="688e2fe7-9d0d-40fe-9d1e-e70c1aad5fc5" />
     <Project Path="src/OrchardCoreContrib.Themes.Resume/OrchardCoreContrib.Themes.Resume.csproj" />
     <Project Path="src/OrchardCoreContrib.Themes.StylishPortfolio/OrchardCoreContrib.Themes.StylishPortfolio.csproj" />
     <Project Path="src/OrchardCoreContrib.Themes.Web/OrchardCoreContrib.Themes.Web.csproj" />

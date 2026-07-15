@@ -1,0 +1,12 @@
+﻿@{
+    TagBuilder tag = Tag(Model, "li");
+
+    tag.AddCssClass("nav-item");
+
+    Model.Metadata.Alternates.Clear();
+    Model.Metadata.Type = "MenuItemLink";
+
+    tag.InnerHtml.AppendHtml(await DisplayAsync(Model));
+}
+
+@tag

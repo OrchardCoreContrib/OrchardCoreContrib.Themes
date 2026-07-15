@@ -1,0 +1,55 @@
+﻿@page "/Contact"
+@model OrchardCoreContrib.Themes.Personal.Pages.ContactModel
+@{
+}
+
+<!-- Page content-->
+<section class="py-5">
+    <div class="container px-5">
+        <!-- Contact form-->
+        <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+            <div class="text-center mb-5">
+                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                <h1 class="fw-bolder">@T["Get in touch"]</h1>
+                <p class="lead fw-normal text-muted mb-0">@T["Let's work together!"]</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    @if (!ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger" asp-validation-summary="All"></div>
+                    }
+                    
+                    @if (Model.ShowMessage)
+                    {
+                        <div class="alert alert-success">@Model.SuccessMessage</div>
+                    }
+                    <form method="post" asp-page="Contact">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" asp-for="Name" placeholder="@T["Enter your name..."]" />
+                            <label for="name">@T["Full name"]</label>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" asp-for="Email" type="email" placeholder="@T["name@example.com"]" />
+                            <label for="email">@T["Email address"]</label>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" asp-for="Phone" type="tel" placeholder="@T["(123) 456-7890"]" />
+                            <label for="phone">@T["Phone number"]</label>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" asp-for="Message" placeholder="@T["Enter your message here..."]" style="height: 10rem"></textarea>
+                            <label for="message">@T["Message"]</label>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-lg" type="submit">@T["Submit"]</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
